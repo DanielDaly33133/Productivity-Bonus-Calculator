@@ -1,0 +1,33 @@
+# Employee names
+empName = input("PLease enter employee name: ")
+# Number of Shifts
+shifts = input("Please enter number of shifts worked: ")
+ # Number of Transactions
+transactions = input("Please enter the number of transactions: ")
+# Transaction Dollar Value
+transactionValue = input("Please enter the total transaction dollar value: ")
+# Input variables
+numShifts = float(shifts)
+numTran = float(transactions)
+tranValue = float(transactionValue)
+
+# Bonus
+bonus1 = 50
+bonus2 = 75
+bonus3 = 100
+bonus4 = 200
+
+# Productivity Score
+prodScore = ( (tranValue / numTran) / numShifts )
+if prodScore <= 30:
+    bonus = bonus1
+elif prodScore >= 31 and prodScore <= 69:
+    bonus = bonus2
+elif prodScore >=70 and prodScore <= 199:
+    bonus = bonus3
+elif prodScore >= 200:
+    bonus = bonus4
+
+# Output
+print ("Employee Name: " + empName)
+print ("Employee bonus: $" + str(bonus))
